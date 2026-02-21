@@ -225,7 +225,7 @@ Material:
     - _LinkDetailsWithBase: 0
     - _MaterialID: 1
     - _Metallic: 0
-    - _MetallicRemapMax: 0.74525535
+    - _MetallicRemapMax: 0.57246375
     - _MetallicRemapMin: 0
     - _Mode: 0
     - _NormalMapSpace: 0
@@ -246,8 +246,8 @@ Material:
     - _ReceivesSSRTransparent: 0
     - _RefractionModel: 0
     - _Smoothness: 0.5
-    - _SmoothnessRemapMax: 0.8166487
-    - _SmoothnessRemapMin: 0.13761468
+    - _SmoothnessRemapMax: 0.78985506
+    - _SmoothnessRemapMin: 0
     - _SmoothnessTextureChannel: 1
     - _SpecularAAScreenSpaceVariance: 0.1
     - _SpecularAAThreshold: 0.2
@@ -288,8 +288,8 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.6320754, g: 0.23734213, b: 0.0506853, a: 1}
-    - _Color: {r: 0.6320754, g: 0.23734209, b: 0.05068528, a: 1}
+    - _BaseColor: {r: 0.6792453, g: 0.50082207, b: 0.20825918, a: 1}
+    - _Color: {r: 0.6792453, g: 0.500822, b: 0.20825914, a: 1}
     - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
@@ -305,7 +305,7 @@ Material:
     - _UVMappingMaskEmissive: {r: 1, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &503957062631392631
+--- !u!114 &2401448582301927724
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
