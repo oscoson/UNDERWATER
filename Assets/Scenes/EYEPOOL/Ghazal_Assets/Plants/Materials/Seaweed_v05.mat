@@ -23,7 +23,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: DarkGreenPlant_Mat
+  m_Name: Seaweed_v05
   m_Shader: {fileID: -6465566751694194690, guid: 25860b7f913ae7e4d9f8392e0a4a4e21, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -109,7 +109,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _PlantTex:
-        m_Texture: {fileID: 2800000, guid: a0ac6d66e1218514cbc8d3ccbb058918, type: 3}
+        m_Texture: {fileID: 2800000, guid: 0866a8c89607d9c41b1d54c8c5ed13eb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_761714dc7f314dcabec7f417e60c474e_Texture_1_Texture2D:
