@@ -1,3 +1,4 @@
+
 using UnityEngine;
 
 public class Fish : MonoBehaviour
@@ -25,7 +26,7 @@ public class Fish : MonoBehaviour
     void Start()
     {
         hoverDelayValue = hoverDelay;
-        speed = Random.Range(4, 7);
+        speed = Random.Range(4, 8);
     }
 
     // Update is called once per frame
@@ -68,6 +69,8 @@ public class Fish : MonoBehaviour
                 {
                     Vector3 pos = Vector3.MoveTowards(transform.position, newPos, speed * Time.fixedDeltaTime);
                     gameObject.GetComponent<Rigidbody>().MovePosition(pos);
+                    transform.LookAt(newPos);
+                    transform.rotation = transform.rotation * Quaternion.Euler(-90, 0, 0); 
                 }
                 else
                 {
@@ -86,6 +89,8 @@ public class Fish : MonoBehaviour
                     // Deactivate Hover Animation State Line
                     Vector3 targetPos = Vector3.MoveTowards(transform.position, personAttached.transform.position, speed * Time.fixedDeltaTime);
                     gameObject.GetComponent<Rigidbody>().MovePosition(targetPos);
+                    transform.LookAt(personAttached.transform);
+                    transform.rotation = transform.rotation * Quaternion.Euler(-90, 0, 0);
                 }
                 else if(transform.position == personAttached.transform.position && hoverDelayValue <= 0f)
                 {

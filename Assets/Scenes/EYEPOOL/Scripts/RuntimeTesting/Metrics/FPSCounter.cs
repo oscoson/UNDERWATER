@@ -14,6 +14,8 @@ public class FPSCounter : MonoBehaviour
 
     void Awake()
     {
+        QualitySettings.vSyncCount = 0; // Disable vSync to get accurate FPS readings
+        Application.targetFrameRate = 30;
         frameTimes = new float[averageSampleSize];
     }
 

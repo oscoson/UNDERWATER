@@ -28,14 +28,14 @@ public class AugmentaPickup : MonoBehaviour
     private GameObject captureRingSprite;
     private CapsuleCollider myCollider;
 
-    private EnergyBall carriedBall;
+    private Fish carriedFish;
     private LineRenderer ring;
     private Material ringMat;
     private Color currentClr = Color.white;
     private Color targetClr = Color.white;
     private float baseWidth;
 
-    private EnergyBall overlappingBall;
+    private Fish overlappingFish;
     private float pickupTimer;
     private bool isOverlapping = false;
 
@@ -137,11 +137,11 @@ public class AugmentaPickup : MonoBehaviour
     // Entered ball collider
     void OnTriggerEnter(Collider other)
     {
-        if (carriedBall != null) return;
+        if (carriedFish != null) return;
 
-        if (other.TryGetComponent(out EnergyBall ball) && ball.state != EnergyBall.BallState.Attached)
+        if (other.TryGetComponent(out Fish fish) && fish.state != Fish.FishState.Captured)
         {
-            overlappingBall = ball;
+            overlappingFish = fish;
             pickupTimer = 0f;
             isOverlapping = true;
         }
@@ -150,36 +150,35 @@ public class AugmentaPickup : MonoBehaviour
     // Exited Ball collider
     void OnTriggerExit(Collider other)
     {
-        if (overlappingBall != null && other.gameObject == overlappingBall.gameObject)
+        if (overlappingFish != null && other.gameObject == overlappingFish.gameObject)
         {
-            overlappingBall = null;
+            overlappingFish = null;
             isOverlapping = false;
         }
     }
 
     void Update()
     {
-        // Orbit motion
-        if (carriedBall != null) // "I am already holding a ball"
-        {
-            float speed = myAugmentaObject.worldVelocity3D.magnitude;
-            // Update only if speed changed significantly
-            if (Mathf.Abs(speed - lastSpeed) > speedDifferenceThreshold)
-            {
-                UpdateRingRadius(1f + speed * speedToRingRadiusFactor);
-                lastSpeed = speed;
-            }
-        }
-        else if (isOverlapping && overlappingBall != null) // "I am colliding with a ball"
+        // // Orbit motion
+        // if (carriedFish != null) // "I am already holding a ball"
+        // {
+        //     float speed = myAugmentaObject.worldVelocity3D.magnitude;
+        //     // Update only if speed changed significantly
+        //     if (Mathf.Abs(speed - lastSpeed) > speedDifferenceThreshold)
+        //     {
+        //         UpdateRingRadius(1f + speed * speedToRingRadiusFactor);
+        //         lastSpeed = speed;
+        //     }
+        // }
+        if (isOverlapping && overlappingFish != null) // "I am colliding with a fish"
         {
             pickupTimer += Time.deltaTime;
             if (pickupTimer >= pickupDelay)
             {
-                carriedBall = overlappingBall;
-                targetClr = carriedBall.ballColor;
-                carriedBall.AttachTo(transform);
+                carriedFish = overlappingFish;
+                carriedFish.AttachTo(transform);
 
-                overlappingBall = null;
+                overlappingFish = null;
                 isOverlapping = false;
             }
         }
@@ -203,9 +202,9 @@ public class AugmentaPickup : MonoBehaviour
     {
         DetachBallRing();
         UpdateRingRadius(1.0f); // return ring to original size
-        if (carriedBall == null) return;
+        if (carriedFish == null) return;
 
-        carriedBall = null;           // Update() will fade back to white
+        carriedFish = null;           // Update() will fade back to white
     }
 
     public void AttachBallRing(EnergyBall ball)
