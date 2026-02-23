@@ -35,6 +35,7 @@ public class Fish : MonoBehaviour
         switch(state)
         {
             case FishState.Idle:
+                speed = Random.Range(4, 8);
                 idleCountdown -= Time.deltaTime;
                 if (idleCountdown <= 0f)
                 {

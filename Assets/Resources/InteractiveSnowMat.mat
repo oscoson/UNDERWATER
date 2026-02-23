@@ -83,7 +83,7 @@ Material:
     - _ExcludeFromTUAndAA: 0
     - _MaterialID: 1
     - _MaterialTypeMask: 2
-    - _NoiseScale: 0.32
+    - _NoiseScale: 0.35
     - _OpaqueCullMode: 2
     - _PerPixelSorting: 0
     - _RayTracing: 0
@@ -119,8 +119,8 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 1
     m_Colors:
-    - _ColorBottom: {r: 0.028346404, g: 0.8004698, b: 0.8584906, a: 1}
-    - _ColorTop: {r: 0.7146226, g: 0.9528302, b: 0.9382461, a: 1}
+    - _ColorBottom: {r: 0.5566038, g: 0.37145817, b: 0.04463333, a: 1}
+    - _ColorTop: {r: 0.79607844, g: 0.7411765, b: 0.5764706, a: 1}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _SnowHeightRange: {r: -0.22, g: 1, b: 0, a: 0}

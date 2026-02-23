@@ -15,7 +15,7 @@ float spotSize;
 [numthreads(8, 8, 1)]
 void CSMain(uint3 id : SV_DispatchThreadID)
 {
-	snowImage[id.xy] += float4(colorValueToAdd, colorValueToAdd, colorValueToAdd, colorValueToAdd)* 5;
+	snowImage[id.xy] += float4(colorValueToAdd, colorValueToAdd, colorValueToAdd, colorValueToAdd) / 15;
 }
 
 [numthreads(8, 8, 1)]
@@ -31,7 +31,7 @@ void DrawSpot(uint3 id : SV_DispatchThreadID)
 	float y = id.y / resolution;
 	float value;
 
-	value = sqrt(((x - positionX / resolution) * (x - positionX / resolution) + (y - positionY / resolution) * (y - positionY / resolution))) * 100;
+	value = sqrt(((x - positionX / resolution) * (x - positionX / resolution) + (y - positionY / resolution) * (y - positionY / resolution))) * 80;
 
 	if (value < spotSize)
 	{
