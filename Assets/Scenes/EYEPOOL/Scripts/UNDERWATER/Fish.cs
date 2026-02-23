@@ -79,8 +79,14 @@ public class Fish : MonoBehaviour
                 }
                 break;
             case FishState.Captured:
-                if(transform.position != personAttached.transform.position)
+                if(personAttached == null)
                 {
+                    state = FishState.Idle;
+                    break;
+                }
+                else if(transform.position != personAttached.transform.position)
+                {
+                    speed = 25;
                     if(hoverDelayValue > 0f)
                     {
                         hoverDelayValue -= Time.fixedDeltaTime;
@@ -95,6 +101,7 @@ public class Fish : MonoBehaviour
                 else if(transform.position == personAttached.transform.position && hoverDelayValue <= 0f)
                 {
                     hoverDelayValue = hoverDelay;
+                    speed = 4;
                     // Activate Hover Animation State Line
                 }
                 break;
