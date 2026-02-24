@@ -109,7 +109,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _PlantTex:
-        m_Texture: {fileID: 2800000, guid: 0866a8c89607d9c41b1d54c8c5ed13eb, type: 3}
+        m_Texture: {fileID: 2800000, guid: f86378f30111f82479dc92124d332761, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_761714dc7f314dcabec7f417e60c474e_Texture_1_Texture2D:

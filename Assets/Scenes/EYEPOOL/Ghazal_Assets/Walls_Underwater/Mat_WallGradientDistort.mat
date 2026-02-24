@@ -48,7 +48,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _GradientTex:
-        m_Texture: {fileID: 2800000, guid: 6fc9d92bbe4ada8448a80bd8dd1f9a00, type: 3}
+        m_Texture: {fileID: 2800000, guid: e00aeaedd24040a42b4fce0dcde93359, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NoiseTex:
@@ -70,7 +70,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _AddPrecomputedVelocity: 0
-    - _Alpha: 0.451
+    - _Alpha: 0.025
     - _AlphaCutoffEnable: 0
     - _AlphaDstBlend: 10
     - _AlphaSrcBlend: 1
@@ -110,8 +110,8 @@ Material:
     - _TransparentWritingMotionVec: 0
     - _TransparentZWrite: 0
     - _UseShadowThreshold: 0
-    - _WaveSpeed: 0.08
-    - _WaveStrength: 0.3
+    - _WaveSpeed: 0.1
+    - _WaveStrength: 0.7
     - _WobbleSpeed: 1
     - _ZTestDepthEqualForOpaque: 4
     - _ZTestTransparent: 4
