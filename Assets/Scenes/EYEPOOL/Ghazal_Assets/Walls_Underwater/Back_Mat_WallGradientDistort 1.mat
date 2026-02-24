@@ -70,7 +70,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _AddPrecomputedVelocity: 0
-    - _Alpha: 0.676
+    - _Alpha: 0.596
     - _AlphaCutoffEnable: 0
     - _AlphaDstBlend: 10
     - _AlphaSrcBlend: 1
@@ -112,11 +112,11 @@ Material:
     - _UseShadowThreshold: 0
     - _WaveSpeed: 0.04
     - _WaveStrength: 0.03
-    - _WobbleSpeed: 0.2
+    - _WobbleSpeed: 0.3
     - _ZTestDepthEqualForOpaque: 4
     - _ZTestTransparent: 4
     - _ZWrite: 0
-    - _wobbleStrength: 0.6
+    - _wobbleStrength: 0.8
     m_Colors:
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
