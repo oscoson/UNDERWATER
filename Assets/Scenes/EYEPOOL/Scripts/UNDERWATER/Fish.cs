@@ -19,9 +19,9 @@ public class Fish : MonoBehaviour
     private float idleCountdown = 0.5f;
     private int spawnRange = 14;
     private float yPos = -0.25f;
+    private float hoverDelay = 0.1f;
     [SerializeField] private Vector3 newPos;
     [SerializeField] private float speed;
-    [SerializeField] private float hoverDelay;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -71,7 +71,7 @@ public class Fish : MonoBehaviour
                     Vector3 pos = Vector3.MoveTowards(transform.position, newPos, speed * Time.fixedDeltaTime);
                     gameObject.GetComponent<Rigidbody>().MovePosition(pos);
                     transform.LookAt(newPos);
-                    transform.rotation = transform.rotation * Quaternion.Euler(-90, 0, 0); 
+                    transform.rotation = transform.rotation * Quaternion.Euler(0, 90, 0);
                 }
                 else
                 {
@@ -97,7 +97,7 @@ public class Fish : MonoBehaviour
                     Vector3 targetPos = Vector3.MoveTowards(transform.position, personAttached.transform.position, speed * Time.fixedDeltaTime);
                     gameObject.GetComponent<Rigidbody>().MovePosition(targetPos);
                     transform.LookAt(personAttached.transform);
-                    transform.rotation = transform.rotation * Quaternion.Euler(-90, 0, 0);
+                    transform.rotation = transform.rotation * Quaternion.Euler(0, 90, 0);
                 }
                 else if(transform.position == personAttached.transform.position && hoverDelayValue <= 0f)
                 {

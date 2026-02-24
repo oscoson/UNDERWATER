@@ -39,8 +39,6 @@ public class AugmentaPickup : MonoBehaviour
     private float pickupTimer;
     private bool isOverlapping = false;
 
-    private float lastSpeed = -1f;
-
     void Awake()
     {
         myAugmentaObject = GetComponent<AugmentaObject>();
