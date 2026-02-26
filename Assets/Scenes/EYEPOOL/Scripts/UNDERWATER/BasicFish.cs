@@ -3,7 +3,7 @@ using UnityEngine;
 public class BasicFish : MonoBehaviour // This fish does not serve as a parent class for other fish types, it is simply a fish that moves one way and destroys itself
 {
     public Vector3 fishDirection;
-    private float destroyTime = 12f;
+    private float destroyTime = 15f;
     private int speed;
     void Start()
     {
