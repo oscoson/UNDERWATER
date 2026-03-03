@@ -657,8 +657,9 @@ GameObject:
   - component: {fileID: 38023330}
   - component: {fileID: 38023329}
   - component: {fileID: 38023328}
+  - component: {fileID: 38023332}
   m_Layer: 0
-  m_Name: Quad (3)
+  m_Name: Mid Wall D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -754,6 +755,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 889624502}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!95 &38023332
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38023327}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &51745855
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1599,8 +1622,9 @@ GameObject:
   - component: {fileID: 98735273}
   - component: {fileID: 98735272}
   - component: {fileID: 98735271}
+  - component: {fileID: 98735274}
   m_Layer: 0
-  m_Name: Quad (7)
+  m_Name: Background Wall D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1696,6 +1720,28 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 98735269}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!95 &98735274
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98735269}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &105387299
 GameObject:
   m_ObjectHideFlags: 0
@@ -19899,6 +19945,7 @@ GameObject:
   - component: {fileID: 919735677}
   - component: {fileID: 919735676}
   - component: {fileID: 919735675}
+  - component: {fileID: 919735679}
   m_Layer: 0
   m_Name: Mid Wall C
   m_TagString: Untagged
@@ -19996,6 +20043,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 678713816}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!95 &919735679
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919735674}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &929953252 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4742711428637632, guid: bd93fd9b59f7ebc40abae1eadaea9168, type: 3}
@@ -31631,6 +31700,22 @@ PlayableDirector:
     value: {fileID: 774378521}
   - key: {fileID: 4619448719168895870, guid: 3e4a8a73cee68d84a892adbe7c7ade41, type: 2}
     value: {fileID: 1055135183}
+  - key: {fileID: -2567581043219869927, guid: 3e4a8a73cee68d84a892adbe7c7ade41, type: 2}
+    value: {fileID: 2108512990}
+  - key: {fileID: 4785872761990151343, guid: 3e4a8a73cee68d84a892adbe7c7ade41, type: 2}
+    value: {fileID: 919735679}
+  - key: {fileID: 2723243737757624018, guid: 3e4a8a73cee68d84a892adbe7c7ade41, type: 2}
+    value: {fileID: 1705398727}
+  - key: {fileID: -1489585398161459192, guid: 3e4a8a73cee68d84a892adbe7c7ade41, type: 2}
+    value: {fileID: 1669415343}
+  - key: {fileID: 4022320322935871336, guid: 3e4a8a73cee68d84a892adbe7c7ade41, type: 2}
+    value: {fileID: 1288056441}
+  - key: {fileID: 6370042581744663392, guid: 3e4a8a73cee68d84a892adbe7c7ade41, type: 2}
+    value: {fileID: 38023332}
+  - key: {fileID: 1004888009713486749, guid: 3e4a8a73cee68d84a892adbe7c7ade41, type: 2}
+    value: {fileID: 2004365593}
+  - key: {fileID: -27082313325683662, guid: 3e4a8a73cee68d84a892adbe7c7ade41, type: 2}
+    value: {fileID: 98735274}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1069374632
@@ -50502,8 +50587,9 @@ GameObject:
   - component: {fileID: 1288056440}
   - component: {fileID: 1288056439}
   - component: {fileID: 1288056438}
+  - component: {fileID: 1288056441}
   m_Layer: 0
-  m_Name: Quad (5)
+  m_Name: Back Wall D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50599,6 +50685,28 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1288056436}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!95 &1288056441
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288056436}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1288869761
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -70951,6 +71059,7 @@ GameObject:
   - component: {fileID: 1669415342}
   - component: {fileID: 1669415341}
   - component: {fileID: 1669415340}
+  - component: {fileID: 1669415343}
   m_Layer: 0
   m_Name: Background Wall C
   m_TagString: Untagged
@@ -71048,6 +71157,28 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1669415338}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!95 &1669415343
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669415338}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1676662595
 GameObject:
   m_ObjectHideFlags: 0
@@ -81254,6 +81385,7 @@ GameObject:
   - component: {fileID: 1705398726}
   - component: {fileID: 1705398725}
   - component: {fileID: 1705398724}
+  - component: {fileID: 1705398727}
   m_Layer: 0
   m_Name: Front Wall C
   m_TagString: Untagged
@@ -81351,6 +81483,28 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1705398722}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!95 &1705398727
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705398722}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1707503314
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -98286,8 +98440,9 @@ GameObject:
   - component: {fileID: 2004365592}
   - component: {fileID: 2004365591}
   - component: {fileID: 2004365590}
+  - component: {fileID: 2004365593}
   m_Layer: 0
-  m_Name: Quad (6)
+  m_Name: Front Wall D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98383,6 +98538,28 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2004365588}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!95 &2004365593
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004365588}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &2007523108
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -100084,6 +100261,7 @@ GameObject:
   - component: {fileID: 2108512989}
   - component: {fileID: 2108512988}
   - component: {fileID: 2108512987}
+  - component: {fileID: 2108512990}
   m_Layer: 0
   m_Name: Back Wall C
   m_TagString: Untagged
@@ -100181,6 +100359,28 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2108512985}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!95 &2108512990
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108512985}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &2108702890
 PrefabInstance:
   m_ObjectHideFlags: 0
