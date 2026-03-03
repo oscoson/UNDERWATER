@@ -82,7 +82,7 @@ Material:
     - _ConservativeDepthOffsetEnable: 0
     - _CullMode: 2
     - _CullModeForward: 2
-    - _DayNight: 1
+    - _DayNight: 0
     - _DepthOffsetEnable: 0
     - _DistortionStrength: 0.3
     - _DoubleSidedEnable: 0
