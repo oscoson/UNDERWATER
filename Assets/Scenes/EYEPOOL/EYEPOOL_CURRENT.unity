@@ -3598,7 +3598,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c44bd25368358e04ea44cd8a7fc899bd, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c44bd25368358e04ea44cd8a7fc899bd, type: 3}
       propertyPath: m_TagString
@@ -4450,7 +4450,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c44bd25368358e04ea44cd8a7fc899bd, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c44bd25368358e04ea44cd8a7fc899bd, type: 3}
       propertyPath: m_TagString
@@ -4736,7 +4736,7 @@ MonoBehaviour:
   snowComputeShader: {fileID: 7200000, guid: e2b8524366ce7474d9c78957d74fa56e, type: 3}
   snowRT: {fileID: 0}
   colorValueToAdd: 0.025
-  resolution: 512
+  resolution: 1024
 --- !u!4 &339724170 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4594930529725040, guid: efceadb58900ddb4aa037cac848862f8, type: 3}
@@ -8772,7 +8772,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c44bd25368358e04ea44cd8a7fc899bd, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c44bd25368358e04ea44cd8a7fc899bd, type: 3}
       propertyPath: m_TagString
@@ -9730,7 +9730,7 @@ MonoBehaviour:
   snowComputeShader: {fileID: 7200000, guid: e2b8524366ce7474d9c78957d74fa56e, type: 3}
   snowRT: {fileID: 0}
   colorValueToAdd: 0.025
-  resolution: 512
+  resolution: 1024
 --- !u!4 &686373670 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1810191536081466379, guid: e34f227f7663991478bbd4797e13e965, type: 3}
@@ -29432,7 +29432,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c44bd25368358e04ea44cd8a7fc899bd, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c44bd25368358e04ea44cd8a7fc899bd, type: 3}
       propertyPath: m_TagString
@@ -54469,92 +54469,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8270461964197980595, guid: b05b2f3eb2da2004d869d86c1a1ef0a8, type: 3}
   m_PrefabInstance: {fileID: 187183900}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1354028326
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1354028327}
-  - component: {fileID: 1354028329}
-  - component: {fileID: 1354028328}
-  m_Layer: 0
-  m_Name: SM_Rocks_05 (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1354028327
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1354028326}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.38268343, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 5.76, y: -3.92, z: -11.04}
-  m_LocalScale: {x: 5, y: 4, z: 4}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 1839048599}
-  m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
---- !u!23 &1354028328
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1354028326}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 15f2bd1953b096246a3b14c3db445924, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1354028329
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1354028326}
-  m_Mesh: {fileID: 2183458231789582758, guid: 81e18f21c93cfee42bc9c1a0c63938bd, type: 3}
 --- !u!4 &1356816810 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4590658642912836, guid: 428bbdf30777be043a92558682b7757a, type: 3}
@@ -66789,7 +66703,7 @@ MonoBehaviour:
   snowComputeShader: {fileID: 7200000, guid: e2b8524366ce7474d9c78957d74fa56e, type: 3}
   snowRT: {fileID: 0}
   colorValueToAdd: 0.025
-  resolution: 512
+  resolution: 1024
 --- !u!1001 &1549240116
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -87597,9 +87511,6 @@ PrefabInstance:
       insertIndex: 6
       addedObject: {fileID: 676772359}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 81e18f21c93cfee42bc9c1a0c63938bd, type: 3}
-      insertIndex: 7
-      addedObject: {fileID: 1354028327}
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 81e18f21c93cfee42bc9c1a0c63938bd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 887532014}
     m_AddedComponents: []
@@ -96082,7 +95993,7 @@ MonoBehaviour:
   snowComputeShader: {fileID: 7200000, guid: e2b8524366ce7474d9c78957d74fa56e, type: 3}
   snowRT: {fileID: 0}
   colorValueToAdd: 0.025
-  resolution: 512
+  resolution: 1024
 --- !u!1 &2044483655
 GameObject:
   m_ObjectHideFlags: 0

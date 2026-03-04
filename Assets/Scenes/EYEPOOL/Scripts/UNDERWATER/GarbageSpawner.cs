@@ -1,4 +1,5 @@
 
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GarbageSpawner : MonoBehaviour
@@ -38,7 +39,9 @@ public class GarbageSpawner : MonoBehaviour
     void SpawnGarbage()
     {
         Vector3 spawnPos = new Vector3(Random.Range(-spawnRange, spawnRange), Random.Range(spawnHeightRange.x, spawnHeightRange.y), Random.Range(-spawnRange, spawnRange));
-        Instantiate(garbagePrefabs[Random.Range(0, garbagePrefabs.Length)], spawnPos, Quaternion.Euler(Random.Range(SpawnRotX.x, SpawnRotX.y), Random.Range(-spawnRotY, spawnRotY), Random.Range(-spawnRotZ, spawnRotZ)));
+        GameObject garbagePrefab = Instantiate(garbagePrefabs[Random.Range(0, garbagePrefabs.Length)], spawnPos, Quaternion.Euler(Random.Range(SpawnRotX.x, SpawnRotX.y), Random.Range(-spawnRotY, spawnRotY), Random.Range(-spawnRotZ, spawnRotZ)));
+        garbagePrefab.AddComponent<Garbage>();
+        garbagePrefab.transform.localScale = Vector3.one * Random.Range(6.5f, 11f);
         currentPopulation++;
     }
 }

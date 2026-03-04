@@ -30,7 +30,7 @@ Material:
   m_ValidKeywords: []
   m_InvalidKeywords:
   - _DISABLE_SSR_TRANSPARENT
-  m_LightmapFlags: 0
+  m_LightmapFlags: 1
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2000
@@ -83,7 +83,7 @@ Material:
     - _ExcludeFromTUAndAA: 0
     - _MaterialID: 1
     - _MaterialTypeMask: 2
-    - _NoiseScale: 0.35
+    - _NoiseScale: 0.25
     - _OpaqueCullMode: 2
     - _PerPixelSorting: 0
     - _RayTracing: 0
@@ -119,10 +119,10 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 1
     m_Colors:
-    - _ColorBottom: {r: 0.5566038, g: 0.37145817, b: 0.04463333, a: 1}
-    - _ColorTop: {r: 0.79607844, g: 0.7411765, b: 0.5764706, a: 1}
+    - _ColorBottom: {r: 0.4811321, g: 0.38350737, b: 0.19290674, a: 1}
+    - _ColorTop: {r: 0.5754717, g: 0.54000825, b: 0.4533197, a: 1}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-    - _SnowHeightRange: {r: -0.22, g: 1, b: 0, a: 0}
+    - _SnowHeightRange: {r: -0.22, g: 0.44, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
