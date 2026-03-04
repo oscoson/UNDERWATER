@@ -51,6 +51,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: e00aeaedd24040a42b4fce0dcde93359, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _NightTex:
+        m_Texture: {fileID: 2800000, guid: 02e509e865763004c9b055beb29c2258, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _NoiseTex:
         m_Texture: {fileID: 2800000, guid: f1b6b10620016be45b38159cac55e09b, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -78,6 +82,7 @@ Material:
     - _ConservativeDepthOffsetEnable: 0
     - _CullMode: 2
     - _CullModeForward: 2
+    - _DayNight: 0
     - _DepthOffsetEnable: 0
     - _DistortionStrength: 0.3
     - _DoubleSidedEnable: 0
