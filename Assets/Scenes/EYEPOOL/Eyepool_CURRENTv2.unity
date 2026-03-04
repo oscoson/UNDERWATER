@@ -18038,15 +18038,411 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be0ce1955575ed1449a0615978324c26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugMode: 0
+  debugMode: 1
   sounds:
   - name: BGM
     clip: {fileID: 8300000, guid: 21ebdb9be0a8cf24c83f64b84de61b35, type: 3}
-    volume: 0.51
+    volume: 0.75
     pitch: 1
     loop: 1
-    playAsOneShot: 1
+    playAsOneShot: 0
     mixer: {fileID: -7063479709075668813, guid: 967940645f057d7418e09b0abe755320, type: 2}
+    useFadeIn: 0
+    fadeInTime: 0.1
+    useFadeOut: 0
+    fadeOutTime: 0.1
+    source: {fileID: 0}
+  - name: DayBGM
+    clip: {fileID: 8300000, guid: 734eef7ffad48584685fa842391096ff, type: 3}
+    volume: 0.8
+    pitch: 1
+    loop: 1
+    playAsOneShot: 0
+    mixer: {fileID: -7063479709075668813, guid: 967940645f057d7418e09b0abe755320, type: 2}
+    useFadeIn: 0
+    fadeInTime: 0.1
+    useFadeOut: 0
+    fadeOutTime: 0.1
+    source: {fileID: 0}
+  - name: AMB_M_1
+    clip: {fileID: 8300000, guid: 497327ffa452ba541953018e329b2ad2, type: 3}
+    volume: 0.9
+    pitch: 1
+    loop: 0
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
+    useFadeIn: 0
+    fadeInTime: 0.1
+    useFadeOut: 0
+    fadeOutTime: 0.1
+    source: {fileID: 0}
+  - name: AMB_M_2
+    clip: {fileID: 8300000, guid: 7c771ef736ef8b04cba58801032e9a1d, type: 3}
+    volume: 0.9
+    pitch: 1
+    loop: 0
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: AMB_M_3
+    clip: {fileID: 8300000, guid: 29945e48f49a519469ec25d17303d55a, type: 3}
+    volume: 0.9
+    pitch: 1
+    loop: 0
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
+    useFadeIn: 0
+    fadeInTime: 0.1
+    useFadeOut: 0
+    fadeOutTime: 0.1
+    source: {fileID: 0}
+  - name: AMB_M_4
+    clip: {fileID: 8300000, guid: 6316755bbabf4b940a0d8ba2eea8cc7e, type: 3}
+    volume: 0.9
+    pitch: 1
+    loop: 0
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: AMB_M_5
+    clip: {fileID: 8300000, guid: 308626717c3ee70469bc92d9aa6cbb2c, type: 3}
+    volume: 0.9
+    pitch: 1
+    loop: 0
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: AMB_M_6
+    clip: {fileID: 8300000, guid: 5a5a95505672dd64388354368d02b981, type: 3}
+    volume: 0.9
+    pitch: 1
+    loop: 0
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: AMB_M_7
+    clip: {fileID: 8300000, guid: 192e352751c184641ad9c46ae8155e2f, type: 3}
+    volume: 0.9
+    pitch: 1
+    loop: 0
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
+    useFadeIn: 0
+    fadeInTime: 0.1
+    useFadeOut: 0
+    fadeOutTime: 0.1
+    source: {fileID: 0}
+  - name: AMB_M_8
+    clip: {fileID: 8300000, guid: 5029862d0e15f7e449ac1a03f0d7ffb1, type: 3}
+    volume: 0.9
+    pitch: 1
+    loop: 0
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: AMB_M_9
+    clip: {fileID: 8300000, guid: f8c2eec3de881994dad979f355f51803, type: 3}
+    volume: 0.9
+    pitch: 1
+    loop: 0
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
+    useFadeIn: 0
+    fadeInTime: 0.1
+    useFadeOut: 0
+    fadeOutTime: 0.1
+    source: {fileID: 0}
+  - name: AMB_M_10
+    clip: {fileID: 8300000, guid: 24023479d9283ed4cac8dde0031b59cf, type: 3}
+    volume: 0.9
+    pitch: 1
+    loop: 0
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: AMB_M_11
+    clip: {fileID: 8300000, guid: d5786321fc36c47458f58bf93c94c87b, type: 3}
+    volume: 0.9
+    pitch: 1
+    loop: 0
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: AMB_M_12
+    clip: {fileID: 8300000, guid: cdc6272f6835e1948bc8e66e18efebe6, type: 3}
+    volume: 0.9
+    pitch: 1
+    loop: 0
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: AMB_M_13
+    clip: {fileID: 8300000, guid: 5478528a01627a04b875a250c0f0008f, type: 3}
+    volume: 0.9
+    pitch: 1
+    loop: 0
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: AMB_M_14
+    clip: {fileID: 8300000, guid: 66c3e4ea504acb74baddc40058ed4ad2, type: 3}
+    volume: 0.9
+    pitch: 1
+    loop: 0
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: AMB_M_15
+    clip: {fileID: 8300000, guid: 8e3580d146f648d469bd1c5e6674752c, type: 3}
+    volume: 0.9
+    pitch: 1
+    loop: 0
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
+    useFadeIn: 0
+    fadeInTime: 0.1
+    useFadeOut: 0
+    fadeOutTime: 0.1
+    source: {fileID: 0}
+  - name: AMB_C_1
+    clip: {fileID: 8300000, guid: e0ba8b87b9aba9448b161ebbc1d4a942, type: 3}
+    volume: 0.9
+    pitch: 1
+    loop: 0
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: AMB_C_3
+    clip: {fileID: 8300000, guid: f93d4afbaa68f1340a27af86df4c41db, type: 3}
+    volume: 0.9
+    pitch: 1
+    loop: 0
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: AMB_W_1
+    clip: {fileID: 8300000, guid: 4c228e8a39d7d0647b83dc93140458cf, type: 3}
+    volume: 0.9
+    pitch: 1
+    loop: 0
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
+    useFadeIn: 0
+    fadeInTime: 0.1
+    useFadeOut: 0
+    fadeOutTime: 0.1
+    source: {fileID: 0}
+  - name: AMB_W_2
+    clip: {fileID: 8300000, guid: d62282e39feec3d4db6e23b51c9f26e3, type: 3}
+    volume: 0.9
+    pitch: 1
+    loop: 0
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: AMB_W_3
+    clip: {fileID: 8300000, guid: 54595186a3f282642a8adbd59a633da1, type: 3}
+    volume: 0.9
+    pitch: 1
+    loop: 0
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: AMB_W_4
+    clip: {fileID: 8300000, guid: 13014532a7293a84ca51ae8f2a0f346f, type: 3}
+    volume: 0.9
+    pitch: 1
+    loop: 0
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: AMB_W_5
+    clip: {fileID: 8300000, guid: 17aaa6be86b43084da87b1696de74d6d, type: 3}
+    volume: 0.9
+    pitch: 1
+    loop: 0
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: NightBGM_1
+    clip: {fileID: 8300000, guid: bfbe65a3689bf5a49bf02c18d47b856d, type: 3}
+    volume: 0.8
+    pitch: 1
+    loop: 1
+    playAsOneShot: 0
+    mixer: {fileID: -7063479709075668813, guid: 967940645f057d7418e09b0abe755320, type: 2}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: NightBGM_2
+    clip: {fileID: 8300000, guid: c2b7999caee50854face52adf0f5d067, type: 3}
+    volume: 0.8
+    pitch: 1
+    loop: 1
+    playAsOneShot: 0
+    mixer: {fileID: -7063479709075668813, guid: 967940645f057d7418e09b0abe755320, type: 2}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: NightBGM_3
+    clip: {fileID: 8300000, guid: 8894fad6a5969614f8fed345b1bc339e, type: 3}
+    volume: 0.8
+    pitch: 1
+    loop: 1
+    playAsOneShot: 0
+    mixer: {fileID: -7063479709075668813, guid: 967940645f057d7418e09b0abe755320, type: 2}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: NightBGM_4
+    clip: {fileID: 8300000, guid: ff5bfde524e946d4994219cb25ff49c5, type: 3}
+    volume: 0.8
+    pitch: 1
+    loop: 1
+    playAsOneShot: 0
+    mixer: {fileID: -7063479709075668813, guid: 967940645f057d7418e09b0abe755320, type: 2}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: GB_P_1
+    clip: {fileID: 8300000, guid: 9501896594c0816478517243aae4711e, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playAsOneShot: 1
+    mixer: {fileID: 2163872645658760882, guid: 967940645f057d7418e09b0abe755320, type: 2}
+    useFadeIn: 0
+    fadeInTime: 0.1
+    useFadeOut: 0
+    fadeOutTime: 0.1
+    source: {fileID: 0}
+  - name: GB_P_2
+    clip: {fileID: 8300000, guid: 14ee7ef01d2310b4c9414bc7799012b3, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playAsOneShot: 1
+    mixer: {fileID: 2163872645658760882, guid: 967940645f057d7418e09b0abe755320, type: 2}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: GB_P_3
+    clip: {fileID: 8300000, guid: a88abd36ed63e7e41af7a7e4871c5e99, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playAsOneShot: 1
+    mixer: {fileID: 2163872645658760882, guid: 967940645f057d7418e09b0abe755320, type: 2}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: Net-Hook_YANK
+    clip: {fileID: 8300000, guid: 599fc502c06674e429ba82187b80b926, type: 3}
+    volume: 0.9
+    pitch: 1
+    loop: 0
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: Net-Hook_CAST
+    clip: {fileID: 8300000, guid: fa967b6260a170543b06beafcfa6aea3, type: 3}
+    volume: 0.9
+    pitch: 1
+    loop: 0
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: Net-Hook_TRIGGER
+    clip: {fileID: 8300000, guid: a7c969590d55c0b499860251a4337404, type: 3}
+    volume: 0.9
+    pitch: 1
+    loop: 0
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
     useFadeIn: 0
     fadeInTime: 0
     useFadeOut: 0

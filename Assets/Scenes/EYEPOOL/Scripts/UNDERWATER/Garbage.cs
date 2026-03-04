@@ -19,6 +19,7 @@ public class Garbage : MonoBehaviour
         if (other.gameObject.GetComponent<AugmentaPickup>() != null)
         {
             FindAnyObjectByType<GarbageSpawner>().currentPopulation--;
+            FindAnyObjectByType<AudioManager>().GarbagePickupSound();
             // Play Destroy Animation Here
             Destroy(gameObject, 0.1f); // Once animation is done, destroy the garbage object (tweak once animation is done)
         }

@@ -51,8 +51,10 @@ public class AudioManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        BackgroundSounds();
-        // PeriodicSoundHandler(); 
+        BackgroundMusic();
+        PeriodicAmbienceHandler(); 
+        PeriodicChimeHandler();
+        PeriodicWhaleHandler();
     }
 
     public void Play(string name)
@@ -161,9 +163,16 @@ public class AudioManager : MonoBehaviour
         StartCoroutine(FadeOut(s, fadeTime));
     }
 
-    private void BackgroundSounds()
+    public void GarbagePickupSound()
+    {
+        int randInt = UnityEngine.Random.Range(1, 4);
+        Play("GB_P_" + randInt.ToString());
+    }
+
+    private void BackgroundMusic()
     {
         Play("BGM");
+        Play("DayBGM");
     }
     
     private IEnumerator FadeIn(Sound sound, float fadeTime)
@@ -197,65 +206,48 @@ public class AudioManager : MonoBehaviour
         sound.source.volume = sound.volume; // Reset to original volume
     }
 
-    private void PeriodicSoundHandler()
+    private void PeriodicAmbienceHandler()
     {
         StartCoroutine(RandomAmbientSoundCoroutine());
+    }
+
+    private void PeriodicChimeHandler()
+    {
+        StartCoroutine(RandomChimeSoundCoroutine());
+    }
+
+    private void PeriodicWhaleHandler()
+    {
+        StartCoroutine(RandomWhaleSoundCoroutine());
     }
 
     private IEnumerator RandomAmbientSoundCoroutine()
     {
         yield return new WaitForSeconds(UnityEngine.Random.Range(2, 11));
 
-        int randInt = UnityEngine.Random.Range(1, 15);
+        int randInt = UnityEngine.Random.Range(1, 16);
 
-        switch(randInt)
-        {
-            case 1:
-                Play("ELEC_1");
-                break;
-            case 2:
-                Play("ELEC_2");
-                break;
-            case 3:
-                Play("ELEC_3");
-                break;
-            case 4:
-                Play("ELEC_4");
-                break;
-            case 5:
-                Play("COMPNOISE_1");
-                break;
-            case 6:
-                Play("COMPNOISE_2");
-                break;
-            case 7:
-                Play("COMPNOISE_3");
-                break;
-            case 8:
-                Play("COMPNOISE_4");
-                break;
-            case 9:
-                Play("COMPNOISE_5");
-                break;
-            case 10:
-                Play("COMPNOISE_6");
-                break;
-            case 11:
-                Play("DIAL_1");
-                break;
-            case 12:
-                Play("DIAL_2");
-                break;
-            case 13:
-                Play("DIAL_3");
-                break;
-            case 14:
-                Play("DIAL_4");
-                break;
-            default:
-                Play("ELEC_1");
-                break;
-        }
+        Play("AMB_M_" + randInt.ToString());
         StartCoroutine(RandomAmbientSoundCoroutine());
+    }
+
+    private IEnumerator RandomChimeSoundCoroutine()
+    {
+        yield return new WaitForSeconds(UnityEngine.Random.Range(3, 20));
+
+        int randInt = UnityEngine.Random.Range(1, 4);
+
+        Play("AMB_C_" + randInt.ToString());
+        StartCoroutine(RandomChimeSoundCoroutine());
+    }
+
+    private IEnumerator RandomWhaleSoundCoroutine()
+    {
+        yield return new WaitForSeconds(UnityEngine.Random.Range(5, 30));
+
+        int randInt = UnityEngine.Random.Range(1, 6);
+
+        Play("AMB_W_" + randInt.ToString());
+        StartCoroutine(RandomWhaleSoundCoroutine());
     }
 }
