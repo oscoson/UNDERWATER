@@ -18039,7 +18039,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugMode: 0
-  sounds: []
+  sounds:
+  - name: BGM
+    clip: {fileID: 8300000, guid: 21ebdb9be0a8cf24c83f64b84de61b35, type: 3}
+    volume: 0.51
+    pitch: 1
+    loop: 1
+    playAsOneShot: 1
+    mixer: {fileID: -7063479709075668813, guid: 967940645f057d7418e09b0abe755320, type: 2}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
 --- !u!4 &774094920
 Transform:
   m_ObjectHideFlags: 0
@@ -55678,7 +55690,7 @@ MonoBehaviour:
   currentPopulation: 0
   maxSpawnPopulation: 25
   spawnRange: 14
-  spawnHeightRange: {x: -1.8, y: -1.33}
+  spawnHeightRange: {x: -1.3, y: -1.2}
   SpawnRotX: {x: 90, y: 120}
   spawnRotY: 20
   spawnRotZ: 25

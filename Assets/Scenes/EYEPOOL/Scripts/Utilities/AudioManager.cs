@@ -51,7 +51,7 @@ public class AudioManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // BackgroundSounds();
+        BackgroundSounds();
         // PeriodicSoundHandler(); 
     }
 
@@ -164,9 +164,6 @@ public class AudioManager : MonoBehaviour
     private void BackgroundSounds()
     {
         Play("BGM");
-        Play("THUNDERSTORM");
-        Play("CRT_SCREEN");
-        Play("NOTES_FLYING");
     }
     
     private IEnumerator FadeIn(Sound sound, float fadeTime)
