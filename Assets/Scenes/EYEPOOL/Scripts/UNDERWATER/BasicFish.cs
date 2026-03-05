@@ -9,8 +9,8 @@ public class BasicFish : MonoBehaviour // This fish does not serve as a parent c
     void Start()
     {
         speed = Random.Range(5f, 10f);
-        gameObject.AddComponent<BoxCollider>().isTrigger = true;
-        gameObject.GetComponent<BoxCollider>().size = new Vector3(0.2f, 0.2f, 0.2f);
+        gameObject.AddComponent<SphereCollider>().radius = 0.1f;
+        gameObject.GetComponent<SphereCollider>().isTrigger = true;
     }
 
     void Update()
@@ -22,7 +22,18 @@ public class BasicFish : MonoBehaviour // This fish does not serve as a parent c
         }
         if(isCaught && speed > 0)
         {
-            speed -= Time.deltaTime * 7f;
+            if(gameObject.transform.parent.GetComponent<FishNet>().netType == FishNet.FishnetType.Hook)
+            {
+                speed -= Time.deltaTime * 15f;
+            }
+            else
+            {
+                speed -= Time.deltaTime * 7f;   
+            }
+        }
+        if(speed < 0)
+        {
+            speed = 0;;
         }
         transform.position += fishDirection * speed * Time.deltaTime;
     }

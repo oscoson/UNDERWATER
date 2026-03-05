@@ -22,7 +22,7 @@ public class FishNet : MonoBehaviour
     private Animator animator;
     public bool playingAnimation;
     private List<GameObject> caughtFishObjects = new List<GameObject>();
-    private float destroyFishDelay = 2f;
+    private float destroyFishDelay = 1.75f;
     private float destroyFishTimer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

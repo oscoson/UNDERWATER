@@ -7573,8 +7573,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.04
-  m_Center: {x: 0, y: 0.015, z: 0}
+  m_Radius: 0.02
+  m_Center: {x: 0, y: 0.02, z: 0}
 --- !u!95 &181641671
 Animator:
   serializedVersion: 7
@@ -19645,7 +19645,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Net-Hook_YANK
     clip: {fileID: 8300000, guid: 599fc502c06674e429ba82187b80b926, type: 3}
-    volume: 0.9
+    volume: 1
     pitch: 1
     loop: 0
     playAsOneShot: 1
@@ -19657,7 +19657,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Net-Hook_CAST
     clip: {fileID: 8300000, guid: fa967b6260a170543b06beafcfa6aea3, type: 3}
-    volume: 0.9
+    volume: 1
     pitch: 1
     loop: 0
     playAsOneShot: 1
@@ -19669,7 +19669,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Net-Hook_TRIGGER
     clip: {fileID: 8300000, guid: a7c969590d55c0b499860251a4337404, type: 3}
-    volume: 0.9
+    volume: 1
     pitch: 1
     loop: 0
     playAsOneShot: 1
@@ -32929,7 +32929,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 60e3c60a54c8d6d44b85d775da6490d3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 20.88287
+      value: 23.88287
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 60e3c60a54c8d6d44b85d775da6490d3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -110478,7 +110478,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1837997937
 Transform:
   m_ObjectHideFlags: 0

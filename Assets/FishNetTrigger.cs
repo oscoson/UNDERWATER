@@ -7,7 +7,12 @@ public class FishNetTrigger : MonoBehaviour
 {
     public HashSet<AugmentaObject> usersInZone = new();
     public FishNet fishNetScript;
+    private AudioManager audioManager;
 
+    void Awake()
+    {
+        audioManager = FindAnyObjectByType<AudioManager>();
+    }
     void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.GetComponent<AugmentaObject>() != null && usersInZone.Count == 0)
@@ -17,6 +22,14 @@ public class FishNetTrigger : MonoBehaviour
         }
         if(usersInZone.Count == 1 && fishNetScript.netState == FishNet.FishNetState.Undeployed)
         {
+            if(fishNetScript.netType == FishNet.FishnetType.Net)
+            {
+                audioManager.Play("Net-Hook_CAST");
+            }
+            else if(fishNetScript.netType == FishNet.FishnetType.Hook)
+            {
+                audioManager.Play("Net-Hook_YANK");
+            }
             fishNetScript.DeployNet();
         }
     }
@@ -30,6 +43,7 @@ public class FishNetTrigger : MonoBehaviour
         }
         if(usersInZone.Count == 0 && fishNetScript.netState == FishNet.FishNetState.Deployed)
         {
+            audioManager.Play("Net-Hook_TRIGGER");
             fishNetScript.RetractNet();
         }
     }
