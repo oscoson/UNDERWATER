@@ -11,7 +11,6 @@ public class UIDisplay : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private KeypressManager keypressManager;
-    [SerializeField] private BallSpawner ballSpawner;
     [SerializeField] private FPSCounter fpsCounter;
     [SerializeField] private TextMeshProUGUI logText;
     [SerializeField] private GameObject Debugger;
@@ -22,7 +21,7 @@ public class UIDisplay : MonoBehaviour
 
     private const string MUSIC_VOLUME_PARAM = "MUSIC";
     private const string SFX_VOLUME_PARAM = "SFX";
-    private const string VO_VOLUME_PARAM = "VO";
+    private const string EA_VOLUME_PARAM = "EASTER";
 
 
     void Awake()
@@ -34,8 +33,8 @@ public class UIDisplay : MonoBehaviour
         keypressManager.onEPressed.AddListener(IncreaseMusicVolume);
         keypressManager.OnAPressed.AddListener(DecreaseSFXVolume);
         keypressManager.OnDPressed.AddListener(IncreaseSFXVolume);
-        keypressManager.OnZPressed.AddListener(DecreaseVOVolume);
-        keypressManager.OnCPressed.AddListener(IncreaseVOVolume);
+        keypressManager.OnZPressed.AddListener(DecreaseEAVolume);
+        keypressManager.OnCPressed.AddListener(IncreaseEAVolume);
     }
 
     void Update()
@@ -43,13 +42,6 @@ public class UIDisplay : MonoBehaviour
         if (logText == null) return;
 
         string text = "";
-
-        if (ballSpawner != null)
-        {
-            // int numGhosts = ghostSpawner.ghostsToSpawn;
-            int numGhosts = ballSpawner.GetBalls();
-            text += $"# Orbs: {numGhosts}\n";
-        }
 
         if (fpsCounter != null)
         {
@@ -67,10 +59,10 @@ public class UIDisplay : MonoBehaviour
         {
             audioMixer.GetFloat(MUSIC_VOLUME_PARAM, out float musicVolume);
             audioMixer.GetFloat(SFX_VOLUME_PARAM, out float sfxVolume);
-            audioMixer.GetFloat(VO_VOLUME_PARAM, out float voVolume);
+            audioMixer.GetFloat(EA_VOLUME_PARAM, out float eaVolume);
             text += $"\n\nMusic Volume: {musicVolume:F1} dB" +
                     $"\nSFX Volume: {sfxVolume:F1} dB" +
-                    $" VO Volume: {voVolume:F1} dB";
+                    $"\nPickup Volume: {eaVolume:F1} dB";
         }
 
         logText.text = text;
@@ -120,18 +112,18 @@ public class UIDisplay : MonoBehaviour
         audioMixer.SetFloat(SFX_VOLUME_PARAM, currentVolume);
     }
 
-    public void IncreaseVOVolume()
+    public void IncreaseEAVolume()
     {
-        audioMixer.GetFloat(VO_VOLUME_PARAM, out float currentVolume);
+        audioMixer.GetFloat(EA_VOLUME_PARAM, out float currentVolume);
         currentVolume = Mathf.Clamp(currentVolume + 2f, -20f, 20f);
-        audioMixer.SetFloat(VO_VOLUME_PARAM, currentVolume);
+        audioMixer.SetFloat(EA_VOLUME_PARAM, currentVolume);
     }
 
-    public void DecreaseVOVolume()
+    public void DecreaseEAVolume()
     {
-        audioMixer.GetFloat(VO_VOLUME_PARAM, out float currentVolume);
+        audioMixer.GetFloat(EA_VOLUME_PARAM, out float currentVolume);
         currentVolume = Mathf.Clamp(currentVolume - 2f, -20f, 20f);
-        audioMixer.SetFloat(VO_VOLUME_PARAM, currentVolume);
+        audioMixer.SetFloat(EA_VOLUME_PARAM, currentVolume);
     }
     
 

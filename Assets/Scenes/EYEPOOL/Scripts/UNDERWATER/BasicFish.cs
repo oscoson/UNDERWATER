@@ -5,9 +5,10 @@ public class BasicFish : MonoBehaviour // This fish does not serve as a parent c
     public Vector3 fishDirection;
     public float speed;
     public bool isCaught;
-    private float destroyTime = 15f;
+    private float destroyTime = 10f;
     void Start()
     {
+        Instantiate(Resources.Load("DisappearingBubbles"), transform.position, Quaternion.identity);
         speed = Random.Range(5f, 10f);
         gameObject.AddComponent<SphereCollider>().radius = 0.1f;
         gameObject.GetComponent<SphereCollider>().isTrigger = true;
@@ -18,7 +19,8 @@ public class BasicFish : MonoBehaviour // This fish does not serve as a parent c
         destroyTime -= Time.deltaTime;
         if(destroyTime <= 0f && !isCaught)        
         {
-            Destroy(gameObject);
+            Instantiate(Resources.Load("DisappearingBubbles"), transform.position, Quaternion.identity);
+            Destroy(gameObject, 0.5f);
         }
         if(isCaught && speed > 0)
         {
