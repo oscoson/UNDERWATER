@@ -6,12 +6,8 @@ using System.Collections.Generic;
 public class FishNetTrigger : MonoBehaviour
 {
     public HashSet<AugmentaObject> usersInZone = new();
-    private FishNet fishNetScript;
+    public FishNet fishNetScript;
 
-    void Awake()
-    {
-        fishNetScript = FindAnyObjectByType<FishNet>();
-    }
     void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.GetComponent<AugmentaObject>() != null && usersInZone.Count == 0)

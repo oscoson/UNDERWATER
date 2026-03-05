@@ -5,12 +5,18 @@ using System.Linq;
 using UnityEngine;
 public class FishNet : MonoBehaviour
 {
+    public enum FishnetType
+    {
+        Net,
+        Hook
+    }
     public enum FishNetState
     {
         Undeployed,
         Deployed,
     }
     public FishNetState netState;
+    public FishnetType netType;
     [SerializeField] private int fishCaught;
     [SerializeField] private int maxFishToCatch;
     private Animator animator;
@@ -63,7 +69,7 @@ public class FishNet : MonoBehaviour
         }
         else
         {
-            animator.SetTrigger("Deploying");
+            DecideAnimation();
             StartCoroutine(WaitForAnimationToEnd(false));
         }
 
@@ -77,7 +83,7 @@ public class FishNet : MonoBehaviour
         }
         else
         {
-            animator.SetTrigger("Undeploying");
+            DecideAnimation();  //undeploying
             StartCoroutine(WaitForAnimationToEnd(true));
         }
     }
@@ -97,6 +103,32 @@ public class FishNet : MonoBehaviour
                     Destroy(fish);
                 }
             }  
+        }
+    }
+
+    private void DecideAnimation()
+    {
+        if(netType == FishnetType.Net)
+        {
+            if(netState == FishNetState.Undeployed)
+            {
+                animator.SetTrigger("Deploying");
+            }
+            else
+            {
+                animator.SetTrigger("Undeploying");
+            }
+        }
+        else if(netType == FishnetType.Hook)
+        {
+            if(netState == FishNetState.Undeployed)
+            {
+                animator.SetTrigger("HookDeploying");
+            }
+            else
+            {
+                animator.SetTrigger("HookUndeploying");
+            }
         }
     }
 

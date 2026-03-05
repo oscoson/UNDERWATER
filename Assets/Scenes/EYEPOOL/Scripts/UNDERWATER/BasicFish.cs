@@ -22,7 +22,7 @@ public class BasicFish : MonoBehaviour // This fish does not serve as a parent c
         }
         if(isCaught && speed > 0)
         {
-            speed -= Time.deltaTime * 6.5f;
+            speed -= Time.deltaTime * 7f;
         }
         transform.position += fishDirection * speed * Time.deltaTime;
     }
