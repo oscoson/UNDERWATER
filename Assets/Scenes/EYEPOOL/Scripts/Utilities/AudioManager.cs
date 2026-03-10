@@ -30,6 +30,16 @@ public class Sound
 
 public class AudioManager : MonoBehaviour
 {
+    public enum DayNightState
+    {
+        Day,
+        Night
+    }
+    private int nightAmbientIndex = 1;
+    [SerializeField] private DayNightState dayNightState;
+    [SerializeField] private float activeTimer;
+    [SerializeField] private float dayTimer = 600f;
+    [SerializeField] private float nightTimer = 600f;
     [SerializeField] private bool debugMode = false;
     public Sound[] sounds;
     
@@ -51,10 +61,35 @@ public class AudioManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        dayNightState = DayNightState.Day;
+        activeTimer = 300f; // Start with 5 minutes of day, then alternate between day and night every 10 minutes
         BackgroundMusic();
         PeriodicAmbienceHandler(); 
         PeriodicChimeHandler();
         PeriodicWhaleHandler();
+    }
+
+    void Update()
+    {
+        activeTimer -= Time.deltaTime;
+        if(activeTimer <= 0f)
+        {
+            if(dayNightState == DayNightState.Day)
+            {
+                dayNightState = DayNightState.Night;
+                activeTimer = nightTimer;
+                nightAmbientIndex = UnityEngine.Random.Range(1, 5);
+                Play("NightBGM_" + nightAmbientIndex.ToString());
+                StopLoop("DayBGM");
+            }
+            else
+            {
+                dayNightState = DayNightState.Day;
+                activeTimer = dayTimer;
+                Play("DayBGM");
+                StopLoop("NightBGM_" + nightAmbientIndex.ToString());
+            }
+        }
     }
 
     public void Play(string name)
