@@ -7460,9 +7460,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   netState: 0
   netType: 1
-  fishCaught: 0
-  maxFishToCatch: 1
   playingAnimation: 0
+  destroyFishTimer: 0
+  retractTimer: 0
 --- !u!54 &181641669
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13043,9 +13043,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   netState: 0
   netType: 0
-  fishCaught: 0
-  maxFishToCatch: 5
   playingAnimation: 0
+  destroyFishTimer: 0
+  retractTimer: 0
 --- !u!95 &426738154
 Animator:
   serializedVersion: 7
@@ -19213,7 +19213,7 @@ MonoBehaviour:
   activeTimer: 0
   dayTimer: 600
   nightTimer: 600
-  debugMode: 1
+  debugMode: 0
   sounds:
   - name: BGM
     clip: {fileID: 8300000, guid: 21ebdb9be0a8cf24c83f64b84de61b35, type: 3}
@@ -57761,7 +57761,7 @@ MonoBehaviour:
   currentPopulation: 0
   maxSpawnPopulation: 25
   spawnRange: 14
-  spawnHeightRange: {x: -1.3, y: -1.2}
+  spawnHeightRange: {x: -0.75, y: -0.5}
   SpawnRotX: {x: 90, y: 120}
   spawnRotY: 20
   spawnRotZ: 25

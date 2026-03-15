@@ -17,43 +17,47 @@ public class FishNet : MonoBehaviour
     }
     public FishNetState netState;
     public FishnetType netType;
-    [SerializeField] private int fishCaught;
-    [SerializeField] private int maxFishToCatch;
     private Animator animator;
     public bool playingAnimation;
+    public float destroyFishTimer = 0;
+    [SerializeField] private float retractTimer = 0;
     private List<GameObject> caughtFishObjects = new List<GameObject>();
     private float destroyFishDelay = 1.75f;
-    private float destroyFishTimer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        destroyFishTimer = destroyFishDelay;
         animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(caughtFishObjects != null && netState == FishNetState.Undeployed && destroyFishTimer <= 0)
+        if(caughtFishObjects != null && netState == FishNetState.Undeployed && destroyFishTimer < 0)
         {
+            destroyFishTimer = 0;
             DestroyFish();
-            destroyFishTimer = destroyFishDelay;
         }
-        if(destroyFishTimer > 0 && netState == FishNetState.Undeployed)
+        else if(destroyFishTimer > 0 && netState == FishNetState.Undeployed)
         {
             destroyFishTimer -= Time.deltaTime;
+        }
+        
+        if(netState == FishNetState.Deployed && retractTimer <= 0)
+        {
+            RetractNet();
+        }
+        if(netState == FishNetState.Deployed)
+        {
+            retractTimer -= Time.deltaTime;
         }
     }
 
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("FishNet Triggered");
-        if(other.gameObject.GetComponent<BasicFish>() != null && fishCaught < maxFishToCatch && netState == FishNetState.Deployed)
+        if(other.gameObject.GetComponent<BasicFish>() != null && netState == FishNetState.Deployed)
         {
-            Debug.Log("Fish Caught");
             caughtFishObjects.Add(other.gameObject);
-            fishCaught++;
             BasicFish fish = other.gameObject.GetComponent<BasicFish>();
             fish.isCaught = true;
             other.gameObject.transform.SetParent(transform);
@@ -135,15 +139,17 @@ public class FishNet : MonoBehaviour
     IEnumerator WaitForAnimationToEnd(bool isEnding)
     {
         playingAnimation = true;
+        FindAnyObjectByType<AudioManager>().Play("Net-Hook_TRIGGER");
         yield return new WaitForSeconds(1f);
         if (isEnding)
         {
             netState = FishNetState.Undeployed;
-            fishCaught = 0;
+            destroyFishTimer = destroyFishDelay;
             playingAnimation = false;
         }
         else
         {
+            retractTimer = Random.Range(5f, 15f);
             netState = FishNetState.Deployed;
             playingAnimation = false;
         }

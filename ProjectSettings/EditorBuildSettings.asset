@@ -20,9 +20,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/EYEPOOL/EYEPOOL.unity
     guid: 50c20988333078a4aa09593531226f54
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/EYEPOOL/EYEPOOL_CURRENT.unity
     guid: 1a9747341c5f85a4883983d489d5a502
+  - enabled: 1
+    path: Assets/Scenes/EYEPOOL/Eyepool_CURRENTv2.unity
+    guid: d5544dd7ef64fed49af79f9b320049cf
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 393f442f15d34b94c8f8102fc18eb148, type: 2}
   m_UseUCBPForAssetBundles: 0

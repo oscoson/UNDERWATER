@@ -5,7 +5,6 @@ using System.Collections.Generic;
 
 public class FishNetTrigger : MonoBehaviour
 {
-    public HashSet<AugmentaObject> usersInZone = new();
     public FishNet fishNetScript;
     private AudioManager audioManager;
 
@@ -15,12 +14,7 @@ public class FishNetTrigger : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.GetComponent<AugmentaObject>() != null && usersInZone.Count == 0)
-        {
-            AugmentaObject augmenta = other.gameObject.GetComponent<AugmentaObject>();
-            usersInZone.Add(augmenta);   
-        }
-        if(usersInZone.Count == 1 && fishNetScript.netState == FishNet.FishNetState.Undeployed)
+        if(fishNetScript.netState == FishNet.FishNetState.Undeployed && fishNetScript.destroyFishTimer <= 0)
         {
             if(fishNetScript.netType == FishNet.FishnetType.Net)
             {
@@ -31,20 +25,6 @@ public class FishNetTrigger : MonoBehaviour
                 audioManager.Play("Net-Hook_YANK");
             }
             fishNetScript.DeployNet();
-        }
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        if(other.gameObject.GetComponent<AugmentaObject>() != null)
-        {
-            AugmentaObject augmenta = other.gameObject.GetComponent<AugmentaObject>();
-            usersInZone.Remove(augmenta);
-        }
-        if(usersInZone.Count == 0 && fishNetScript.netState == FishNet.FishNetState.Deployed)
-        {
-            audioManager.Play("Net-Hook_TRIGGER");
-            fishNetScript.RetractNet();
         }
     }
 }

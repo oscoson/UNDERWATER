@@ -9,7 +9,7 @@ public class BasicFish : MonoBehaviour // This fish does not serve as a parent c
     void Start()
     {
         Instantiate(Resources.Load("DisappearingBubbles"), transform.position, Quaternion.identity);
-        speed = Random.Range(5f, 10f);
+        speed = Random.Range(5f, 12f);
         gameObject.AddComponent<SphereCollider>().radius = 0.1f;
         gameObject.GetComponent<SphereCollider>().isTrigger = true;
     }
